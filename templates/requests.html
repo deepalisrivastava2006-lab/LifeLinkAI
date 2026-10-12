@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Requests | LifeLink AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+    <h1>🩸 Blood Requests</h1>
+    <p>Requests currently marked as Pending</p>
+
+    {% if requests %}
+        {% for item in requests %}
+        <div class="request-card">
+            <h3>{{ item[1] }} — {{ item[2] }}</h3>
+            <p><strong>City:</strong> {{ item[3] }}</p>
+            <p><strong>Units needed:</strong> {{ item[4] }}</p>
+            <p><strong>Urgency:</strong> {{ item[5] }}</p>
+            <p><strong>Hospital:</strong> {{ item[6] }}</p>
+            <p><strong>Status:</strong> {{ item[7] }}</p>
+            <p><strong>Submitted:</strong> {{ item[8] }}</p>
+        </div>
+        <hr>
+        {% endfor %}
+    {% else %}
+        <p>No pending blood requests right now.</p>
+    {% endif %}
+
+    <p><a href="/request-blood">Submit Another Request</a></p>
+    <p><a href="/">Back to Home</a></p>
+</div>
+
+</body>
+</html>

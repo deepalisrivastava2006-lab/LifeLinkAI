@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLink AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>❤️ LifeLink AI</h1>
+        <p>Saving Lives Through AI</p>
+    </header>
+    <nav>
+    <div class="logo">
+        ❤️ LifeLink AI
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/search">Find Blood</a></li>
+        <li><a href="/register">Donor Registration</a></li>
+        <li><a href="/hospitals">Nearby Hospitals</a></li>
+        <li><a href="#">AI Assistant</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="/chatbot">AI First Aid Assistant</a></li>
+        <li><a href="/emergency">🚨 Emergency</a></li>
+        <li><a href="/dashboard">📊 Dashboard</a></li>
+        <li><a href="/request-blood">Request Blood</a></li>
+        <li><a href="/requests">Blood Requests</a></li>
+
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Saving Lives Through AI</h1>
+
+        <p>
+            Find Blood Donors, Nearby Hospitals and Get AI Powered First Aid Assistance.
+        </p>
+
+        <button>Get Started</button>
+
+    </div>
+    <section class="features">
+
+    <h2>Our Features</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🩸 Blood Donor Search</h3>
+            <p>Find blood donors quickly based on blood group and city.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤖 AI First Aid Assistant</h3>
+            <p>Get basic AI-powered first aid guidance during emergencies.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏥 Nearby Hospitals</h3>
+            <p>Locate nearby hospitals and blood banks instantly.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚨 Emergency SOS</h3>
+            <p>Access emergency contacts and important help instantly.</p>
+        </div>
+
+    </div>
+
+</section>
+
+    <div class="hero-image">
+
+        <img src="{{ url_for('static', filename='images/doctor.png') }}" alt="Doctor">
+
+    </div>
+
+</section>
+</body>
+
+</html>

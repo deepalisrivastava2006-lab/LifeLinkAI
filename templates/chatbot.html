@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Assistant</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h1>🤖 AI First Aid Assistant</h1>
+
+<form action="/chatbot" method="POST">
+
+<textarea
+name="question"
+rows="6"
+placeholder="Describe the emergency..."
+required></textarea>
+
+<button type="submit">
+
+Ask AI
+
+</button>
+
+</form>
+
+{% if answer %}
+
+<hr>
+
+<h3>AI Response</h3>
+
+<p>{{ answer }}</p>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>

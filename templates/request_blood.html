@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Blood | LifeLink AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+    <h1>🩸 Request Blood</h1>
+    <p>Enter the details to submit a blood request.</p>
+
+    <form action="{{ url_for('request_blood') }}" method="POST">
+
+        <label for="patient_name">Patient / Contact Person</label>
+        <input id="patient_name" type="text" name="patient_name"
+               maxlength="100" required>
+
+        <label for="blood_group">Blood Group</label>
+        <select id="blood_group" name="blood_group" required>
+            <option value="">Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+
+        <label for="city">City</label>
+        <input id="city" type="text" name="city"
+               maxlength="100" required>
+
+        <label for="units">Units Needed</label>
+        <input id="units" type="number" name="units"
+               min="1" max="20" required>
+
+        <label for="urgency">Urgency</label>
+        <select id="urgency" name="urgency" required>
+            <option value="Normal">Normal</option>
+            <option value="Urgent">Urgent</option>
+            <option value="Emergency">Emergency</option>
+        </select>
+
+        <label for="hospital">Hospital Name</label>
+        <input id="hospital" type="text" name="hospital"
+               maxlength="150" required>
+
+        <button type="submit">Submit Blood Request</button>
+    </form>
+
+    <p><a href="/">Back to Home</a></p>
+</div>
+
+</body>
+</html>

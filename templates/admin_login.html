@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Login | LifeLink AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>🔐 Admin Login</h1>
+
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <label for="password">Admin Password</label>
+            <input id="password" type="password"
+                   name="password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p><a href="/">Back to Home</a></p>
+    </div>
+</body>
+</html>

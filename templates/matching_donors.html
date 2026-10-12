@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matching Donors | LifeLink AI</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="form-container">
+
+    <h1>🩸 Matching Donors</h1>
+
+    <div class="request-card">
+        <h2>Request #{{ blood_request["id"] }}</h2>
+
+        <p><strong>Blood Group:</strong>
+            {{ blood_request["blood_group"] }}</p>
+
+        <p><strong>City:</strong>
+            {{ blood_request["city"] }}</p>
+
+        <p><strong>Units Needed:</strong>
+            {{ blood_request["units"] }}</p>
+
+        <p><strong>Urgency:</strong>
+            {{ blood_request["urgency"] }}</p>
+
+        <p><strong>Hospital:</strong>
+            {{ blood_request["hospital"] }}</p>
+    </div>
+
+    <h2>Matching Donors ({{ donors|length }})</h2>
+
+    {% if donors %}
+        {% for donor in donors %}
+        <div class="request-card">
+            <h3>{{ donor["name"] }}</h3>
+
+            <p><strong>Blood Group:</strong>
+                {{ donor["blood_group"] }}</p>
+
+            <p><strong>City:</strong>
+                {{ donor["city"] }}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No exact blood-group and city matches found.</p>
+        <p>Try checking other nearby cities through an appropriate
+           donor-coordination process.</p>
+    {% endif %}
+
+    <p>
+        A database match does not confirm donor availability,
+        consent, or medical eligibility. Verify these before
+        coordinating a donation.
+    </p>
+
+    <a href="{{ url_for('admin_dashboard') }}">
+        Back to Admin Dashboard
+    </a>
+
+</div>
+</body>
+</html>

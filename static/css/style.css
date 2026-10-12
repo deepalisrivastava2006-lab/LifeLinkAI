@@ -1,0 +1,309 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+header{
+    background:#d62828;
+    color:white;
+    padding:30px;
+}
+
+section{
+    margin-top:60px;
+}
+
+button{
+    background:#d62828;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#a4161a;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#d62828;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:80px;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:50px;
+    color:#d62828;
+}
+
+.hero-text p{
+    font-size:20px;
+    margin:20px 0;
+}
+
+.hero-image img{
+    width:450px;
+}
+
+button{
+    background:#d62828;
+    color:white;
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#a4161a;
+}
+.features{
+    padding:80px 40px;
+    text-align:center;
+    background:#f8f9fa;
+}
+
+.features h2{
+    font-size:40px;
+    color:#d62828;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#d62828;
+}
+
+.card p{
+    color:#555;
+}
+.form-container{
+    width:450px;
+    margin:60px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.form-container h1{
+    text-align:center;
+    color:#d62828;
+    margin-bottom:25px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,select{
+    padding:12px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    padding:14px;
+    background:#d62828;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#a4161a;
+}
+
+textarea{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    resize:none;
+    font-size:16px;
+}
+
+.emergency-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.emergency-container h1 {
+    color: #d62828;
+    font-size: 40px;
+}
+
+.emergency-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.sos-button {
+    display: block;
+    background: #d62828;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sos-button:hover {
+    background: #a4161a;
+}
+
+.emergency-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.emergency-options a {
+    text-decoration: none;
+    background: #f1f1f1;
+    color: #222;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dashboard {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.dashboard h1 {
+    color: #d62828;
+    font-size: 40px;
+}
+
+.blood-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.blood-card {
+    width: 150px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.blood-card h2 {
+    color: #d62828;
+    font-size: 30px;
+}
+
+.blood-card p {
+    font-size: 18px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 25px;
+    background: #d62828;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+.request-card {
+    background: #fff5f5;
+    border: 1px solid #f3c5c5;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 18px 0;
+    text-align: left;
+}
+
+.request-card h3 {
+    color: #c62828;
+    margin-top: 0;
+}
+
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    box-sizing: border-box;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency SOS - LifeLink AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="emergency-container">
+
+        <h1>🚨 Emergency Assistance</h1>
+
+        <p>
+            If this is a serious emergency, contact emergency services
+            immediately.
+        </p>
+
+        <a href="tel:112" class="sos-button">
+            🚨 CALL EMERGENCY SERVICES
+        </a>
+
+        <div class="emergency-options">
+
+            <a href="/hospitals">
+                🏥 Find Nearby Hospital
+            </a>
+
+            <a href="/search">
+                🩸 Find Blood Donor
+            </a>
+
+            <a href="/chatbot">
+                🤖 Ask AI Assistant
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Blood Donor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+<h1>🩸 Find Blood Donor</h1>
+
+<form action="/search" method="POST">
+
+<select name="blood_group" required>
+
+<option value="">Select Blood Group</option>
+
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB+</option>
+<option>AB-</option>
+<option>O+</option>
+<option>O-</option>
+
+</select>
+
+<input type="text" name="city" placeholder="Enter City" required>
+
+<button type="submit">Search</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

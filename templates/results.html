@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+<h1>Matching Donors</h1>
+
+{% if donors %}
+
+<table border="1" width="100%">
+
+<tr>
+
+<th>Name</th>
+<th>Blood Group</th>
+<th>City</th>
+<th>Phone</th>
+
+</tr>
+
+{% for donor in donors %}
+
+<tr>
+
+<td>{{ donor[0] }}</td>
+<td>{{ donor[1] }}</td>
+<td>{{ donor[2] }}</td>
+<td>{{ donor[3] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% else %}
+
+<h3>No Donor Found</h3>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

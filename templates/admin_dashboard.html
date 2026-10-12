@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin Dashboard | LifeLink AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<div class="form-container">
+
+    <h1>🩸 Admin Dashboard</h1>
+    <p>Manage blood requests and update their status.</p>
+
+    <!-- Logout -->
+    <form action="{{ url_for('admin_logout') }}" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+
+    <hr>
+
+    <!-- Blood requests -->
+    {% for item in requests %}
+
+    <div class="request-card">
+
+        <h3>
+            Request #{{ item["id"] }} — {{ item["blood_group"] }}
+        </h3>
+
+        <p>
+            <strong>Contact person:</strong>
+            {{ item["patient_name"] }}
+        </p>
+
+        <p>
+            <strong>City:</strong>
+            {{ item["city"] }}
+        </p>
+
+        <p>
+            <strong>Units:</strong>
+            {{ item["units"] }}
+        </p>
+
+        <p>
+            <strong>Urgency:</strong>
+            {{ item["urgency"] }}
+        </p>
+
+        <p>
+            <strong>Hospital:</strong>
+            {{ item["hospital"] }}
+        </p>
+
+        <p>
+            <strong>Status:</strong>
+            {{ item["status"] }}
+        </p>
+
+        <!-- Update request status -->
+        <form method="POST"
+              action="{{ url_for(
+                  'update_request_status',
+                  request_id=item['id']
+              ) }}">
+
+            <label for="status-{{ item['id'] }}">
+                Update status
+            </label>
+
+            <select id="status-{{ item['id'] }}"
+                    name="status"
+                    required>
+
+                <option value="Pending"
+                    {% if item["status"] == "Pending" %}
+                        selected
+                    {% endif %}>
+                    Pending
+                </option>
+
+                <option value="In Progress"
+                    {% if item["status"] == "In Progress" %}
+                        selected
+                    {% endif %}>
+                    In Progress
+                </option>
+
+                <option value="Fulfilled"
+                    {% if item["status"] == "Fulfilled" %}
+                        selected
+                    {% endif %}>
+                    Fulfilled
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Save Status
+            </button>
+
+        </form>
+
+        <!-- Find matching donors -->
+        <p>
+            <a href="{{ url_for(
+                'find_matching_donors',
+                request_id=item['id']
+            ) }}">
+                🔍 Find Matching Donors
+            </a>
+        </p>
+
+    </div>
+
+    {% else %}
+
+        <p>No blood requests have been submitted.</p>
+
+    {% endfor %}
+
+    
+<p>
+    <a href="/">Back to Home</a>
+</p>
+    
+
+</div>
+</body>
+</html>
